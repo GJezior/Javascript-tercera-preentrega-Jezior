@@ -1,0 +1,145 @@
+/* PAG. PRINCIPAL */
+
+@mixin tarjeta {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.team {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    background-color: $color-gris;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.card {
+    height: 500px;
+    background-color: $color-grisoscuro;
+    color: $color-blanco;
+    text-align: center;
+    border: 5px solid $color-naranja;
+    margin-bottom: 20px;
+
+    a {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .btn {
+        background-color: #5E6472;
+        color: #fffff2;
+        border-radius: 50px;
+        transition: background-color 0.5s ease, color 0.5s ease;
+        font-size: 12px;
+        border-style: none;
+        margin: 1rem 0 1rem 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        width: 20vw;
+        
+        &:hover {
+            background-color: $color-gris;
+        }
+    }
+}
+
+.card-img1 {
+    @include tarjeta;
+    background-image: url(../img/guitarra\ electrica.jpg);
+}
+
+.card-img2 {
+    @include tarjeta;
+    background-image: url(../img/amplificador\ marshall.jpg);
+}
+
+.card-img3 {
+    @include tarjeta;
+    background-image: url(../img/pedalera\ multiefectos.jpg);
+}
+
+.card-img4 {
+    @include tarjeta;
+    background-image: url(../img/brianmay.jpg);
+}
+
+.card-img5 {
+    @include tarjeta;
+    background-image: url(../img/reverb.png);
+}
+
+.card-img6 {
+    @include tarjeta;
+    background-image: url(../img/thegearpage.png);
+    background-color: $color-negro;
+}
+
+.card-title {
+    color: $color-naranja;
+    text-align: center;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+}
+
+.card-desc {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+}
+
+.section-phrase {
+    height: 110vh;
+    width: 100%;
+    background-image: url(../img/Eric-Clapton.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-bottom: -5px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+    p {
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.5em;
+        font-weight: 300;
+        color: $color-grisclaro;
+        transition: 0.35s;
+
+        &:hover {
+            color: $color-naranja;
+            text-shadow: 0 0 24px $color-naranja;
+            font-weight: 400;
+        }
+    }
+
+    cite {
+        font-size: 1.25em;
+        font-family: "Josefin Sans", sans-serif;
+        font-weight: 300;
+        color: $color-grisclaro;
+        transition: 0.35s;
+
+        &:hover {
+            color: $color-naranja;
+            text-shadow: 0 0 4px $color-naranja;
+        }
+    }
+}
+
+
+/* FIN DE PAG. PRINCIPAL */

@@ -1,0 +1,71 @@
+/* HEADER */
+
+@mixin decoracion {
+    text-decoration: none;
+    color: $color-blanco;
+}
+
+.navbar {
+    background: #BA8B02;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #181818, #BA8B02);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #181818, #BA8B02);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    padding: 30px;
+    font-size: 23px;
+    text-shadow: 0 0 5px $color-negro;
+}
+
+.nav-link {
+    @include decoracion;
+    margin-right: 10px;
+}
+
+.nav-item .nav-link {
+    color: $color-blanco;
+    transition: all 0.5s ease;
+    padding: 1.5rem;
+
+    &:hover {
+        transform: scale(1.2);
+        text-shadow: 0 0 25px $color-gris;
+    }
+}
+
+.navbar-collapse {
+    display: flex;
+    justify-content: flex-end;
+    color: $color-blanco;
+    position: relative;
+    background: #BA8B02;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #181818, #BA8B02);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #181818, #BA8B02);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.logo {
+    font-size: 2rem;
+    color: $color-blanco;
+    text-shadow: $color-grisoscuro;
+    width: 190px;
+    cursor: pointer;
+    transition: 300ms;
+
+    &:hover {
+        scale: 1.1;
+    }
+
+    span {
+        color: $color-grisoscuro;
+        text-shadow: 0 0 5px $color-blanco;
+    }
+}
+
+/* FIN DE HEADER */

@@ -1,0 +1,78 @@
+/* COMIENZO DE FOOTER */
+
+@mixin detalles {
+    text-align: center;
+    color: $color-blanco;
+    background-color: $color-negro;
+}
+
+@mixin detalles2 {
+    color: $color-naranja;
+    text-decoration: none;
+}
+
+@mixin detalles3 {
+    background-color: $color-naranja;
+    text-align: center;
+    color: $color-blanco;
+}
+
+footer {
+    @include detalles;
+    padding: 20px;
+    font-size: 30px;
+
+    p {
+        margin-bottom: 20px;
+    }
+}
+
+.redes {
+    margin: 0 auto;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 40%;
+    flex-flow: row nowrap;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+
+    a {
+        @include detalles2;
+        font-size: 50px;
+    }
+
+    i {
+        color: $color-naranja;
+        font-size: 3rem;
+        padding: 0.25rem;
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+            text-shadow: 0 0 20px $color-naranja;
+            font-size: 4rem;
+        }
+    }
+}
+
+.copy {
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.subir {
+    @include detalles3;
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    line-height: 40px;
+    font-size: 30px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px 3px $color-blanco;
+}
+
+/* FINAL DE FOOTER */
