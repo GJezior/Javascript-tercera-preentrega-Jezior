@@ -1,93 +1,43 @@
-@import url("https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Protest Strike", sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-/* HEADER */
-.navbar {
-  background: #BA8B02; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #181818, #BA8B02); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #181818, #BA8B02); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  display: flex;
-  justify-content: space-between;
-  height: 85px;
-  width: 100%;
-  padding: 30px;
-  font-size: 23px;
-  text-shadow: 0 0 5px #000;
-}
-
-.nav-link {
-  text-decoration: none;
-  color: #fff;
-  margin-right: 10px;
-}
-
-.nav-item .nav-link {
-  color: #fff;
-  transition: all 0.5s ease;
-  padding: 1.5rem;
-}
-.nav-item .nav-link:hover {
-  transform: scale(1.2);
-  text-shadow: 0 0 25px gray;
-}
-
-.navbar-collapse {
-  display: flex;
-  justify-content: flex-end;
-  color: #fff;
-  position: relative;
-  background: #BA8B02; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #181818, #BA8B02); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #181818, #BA8B02); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.logo {
-  font-size: 2rem;
-  color: #fff;
-  text-shadow: #333;
-  width: 190px;
-  cursor: pointer;
-  transition: 300ms;
-}
-.logo:hover {
-  scale: 1.1;
-}
-.logo span {
-  color: #333;
-  text-shadow: 0 0 5px #fff;
-}
-
-/* FIN DE HEADER */
-/* BANNER */
-main {
+body {
   background-image: url(../img/keithvuitton_LouisVuitton.jpg);
   background-size: cover;
   background-position: center;
   background-color: #333;
-  height: 200vh;
+  height: 190vh;
   width: 100%;
-  display: flex;
 }
 
-h1 {
-  color: orange;
-  text-shadow: 2px 2px 0 #000;
-  letter-spacing: 3px;
-  margin-top: 80px;
-  margin-bottom: 20px;
+li {
+  list-style: none;
 }
 
-p, h5 {
-  color: white;
+p,
+h5 {
+  color: rgb(255, 255, 255);
+}
+
+main {
+  margin-top: 100px;
+}
+
+.aFooter {
+  text-decoration: none;
+  font-size: 2rem;
+  color: antiquewhite;
+
+  &:hover {
+    color: rgb(238, 155, 0);
+  }
 }
 
 img:hover {
@@ -95,50 +45,173 @@ img:hover {
   transition: 1s;
 }
 
+h1 {
+  color: aliceblue;
+}
+
+.pheader {
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: #333;
+  width: 190px;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+.pheader span {
+  color: #333;
+  text-shadow: 0 0 5px #fff;
+}
+
+
+.carrito {
+  width: 40px;
+  padding: auto;
+  position: absolute;
+  color: aliceblue;
+
+  &:hover {
+    color: rgb(238, 155, 0);
+  }
+}
+
+.background {
+  background: #BA8B02;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #181818, #BA8B02);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #181818, #BA8B02);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 .custom-card {
-  background-color: #333 !important;
+  background-color: #444 !important;
 }
 
-/* FIN DE BANNER */
-/* PAG. PRINCIPAL */
+.informacion .button:active {
+  background-color: white;
+  color: black;
+}
 
-.section-phrase {
-  height: 110vh;
+.contenedorCompra {
+  display: none;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  background-image: url(../img/Eric-Clapton.jpg);
-  background-size: cover;
-  background-position: center;
-  margin-bottom: -5px;
-  display: flex;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  background-color: rgba(51, 51, 51, 0.6);
   flex-direction: column;
-  position: relative;
-}
-.section-phrase p {
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.5em;
-  font-weight: 300;
-  color: rgba(255, 255, 255, 0.7);
-  transition: 0.35s;
-}
-.section-phrase p:hover {
-  color: orange;
-  text-shadow: 0 0 24px orange;
-  font-weight: 400;
-}
-.section-phrase cite {
-  font-size: 1.25em;
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 300;
-  color: rgba(255, 255, 255, 0.7);
-  transition: 0.35s;
-}
-.section-phrase cite:hover {
-  color: orange;
-  text-shadow: 0 0 4px orange;
+  gap: 35px;
+  color: white;
 }
 
-/* FIN DE PAG. PRINCIPAL */
-/* COMIENZO DE FOOTER */
+.informacionCompra {
+  width: 500px;
+  height: 500px;
+  background-color: #444;
+  border-radius: 25px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: fixed;
+}
+
+.informacionCompra h2 {
+  font-weight: 300;
+  margin: 15px 0 0 50px;
+  font-size: 32px;
+  width: 100%;
+}
+
+.x {
+
+  margin-top: 15px;
+  margin-right: 30px;
+  cursor: pointer;
+  font-size: 30px;
+  color: white;
+}
+
+.btn-remover {
+  background: none;
+  border: none;
+  color: orange;
+  cursor: pointer;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.productosCompra {
+  font-size: 17px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 450px;
+  height: 30%;
+  overflow-y: auto;
+  margin-top: 50px;
+}
+
+.productosCompra>div {
+  margin: 0 45px;
+  padding: 20px 0;
+  width: auto;
+  border-bottom: 1px dotted black;
+  display: flex;
+  justify-content: space-between;
+}
+
+.img {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.productosCompra img {
+  width: 25px;
+  height: auto;
+  margin-right: 10px;
+  border-bottom: none;
+  cursor: pointer;
+}
+
+.total {
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 150px;
+  font-size: 27px;
+  font-weight: 700;
+  color: white;
+}
+
+.total span {
+  font-weight: 300;
+}
+
+.button {
+  color: black;
+  z-index: 1;
+  background-color: orange;
+  width: 300px;
+  height: 45px;
+  border-radius: 10px;
+  border: none;
+
+  font-size: 17px;
+  font-weight: 300;
+}
+
+.button:hover {
+  background-color: white;
+  color: black;
+}
+
 footer {
   text-align: center;
   color: #fff;
@@ -146,6 +219,7 @@ footer {
   padding: 20px;
   font-size: 30px;
 }
+
 footer p {
   margin-bottom: 20px;
 }
@@ -161,17 +235,20 @@ footer p {
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
 }
+
 .redes a {
   color: orange;
   text-decoration: none;
   font-size: 50px;
 }
+
 .redes i {
   color: orange;
   font-size: 3rem;
   padding: 0.25rem;
   transition: all 0.5s ease-in-out;
 }
+
 .redes i:hover {
   text-shadow: 0 0 20px orange;
   font-size: 4rem;
@@ -182,71 +259,3 @@ footer p {
   color: #fff;
   position: relative;
 }
-
-.subir {
-  background-color: orange;
-  text-align: center;
-  color: #fff;
-  height: 40px;
-  width: 40px;
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  line-height: 40px;
-  font-size: 30px;
-  border-radius: 50%;
-  box-shadow: 0 0 5px 3px #fff;
-}
-
-/* FINAL DE FOOTER */
-/* mediaqueries de textos de index*/
-@media only screen and (max-width: 900px) {
-  h1 {
-    font-size: 22px;
-  }
-  .call p {
-    font-size: 16px;
-  }
-  .card-title {
-    font-size: 18px;
-  }
-  .card-desc {
-    font-size: 18px;
-  }
-}
-@media only screen and (max-width: 600px) {
-  h1 {
-    font-size: 19px;
-  }
-  .call p {
-    font-size: 14px;
-  }
-  .card-title {
-    font-size: 16px;
-  }
-  .card-desc {
-    font-size: 16px;
-  }
-}
-@media only screen and (max-width: 400px) {
-  h1 {
-    font-size: 14px;
-  }
-  .call p {
-    font-size: 13px;
-  }
-  .card-title {
-    font-size: 14px;
-  }
-  .card-desc {
-    font-size: 14px;
-  }
-  footer {
-    font-size: 20px;
-  }
-  .redes i {
-    font-size: 2rem;
-  }
-}
-
-/*# sourceMappingURL=estilos.css.map */
